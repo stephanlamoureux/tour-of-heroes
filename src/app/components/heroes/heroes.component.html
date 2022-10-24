@@ -1,0 +1,28 @@
+<div class="container is-fluid">
+	<h2 class="title main-title">Heroes</h2>
+
+	<div class="heroes-wrapper">
+		<ul class="heroes tile is-parent">
+			<!-- To have access to each individual hero and list them all, use *ngFor to iterate through -->
+			<li *ngFor="let hero of heroes" class="tile is-child box">
+				<a routerLink="/detail/{{ hero.id }}" class="heroes-link">
+					<span class="badge">{{ hero.id }}</span> {{ hero.name }}
+				</a>
+				<button type="button" class="delete" title="delete hero" (click)="delete(hero)"></button>
+			</li>
+		</ul>
+	</div>
+
+	<div class="add-hero-wrapper">
+		<label for="new-hero" class="hero-name">Hero Name: </label>
+		<input id="new-hero" #heroName class="input new-hero" />
+		<!-- (click) passes input value to add() and then clears the input -->
+		<button
+			type="button"
+			class="button is-primary add-button"
+			(click)="add(heroName.value); heroName.value = ''"
+		>
+			Add Hero
+		</button>
+	</div>
+</div>

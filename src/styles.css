@@ -1,0 +1,13 @@
+@import url(../node_modules/bulma/css/bulma.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	box-sizing: border-box;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}

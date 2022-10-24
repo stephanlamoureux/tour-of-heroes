@@ -1,0 +1,36 @@
+/* DashboardComponent's private CSS styles */
+
+h2 {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 52px;
+}
+
+.heroes-menu {
+	padding: 0;
+	margin: auto;
+	max-width: 1000px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: flex-start;
+	align-items: flex-start;
+}
+
+a {
+	order: 0;
+	flex: 0 1 auto;
+	align-self: auto;
+}
+
+.top {
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+	a {
+		width: 18%;
+		box-sizing: content-box;
+	}
+}

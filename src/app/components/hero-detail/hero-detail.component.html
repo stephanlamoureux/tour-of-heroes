@@ -1,0 +1,15 @@
+<div *ngIf="hero" class="container is-fluid">
+	<h2>{{ hero.name | uppercase }} Details</h2>
+
+	<div class="details">
+		<div class="id">id: {{ hero.id }}</div>
+		<div class="input-wrapper">
+			<div class="input-container">
+				<label for="hero-name">Edit Name: </label>
+				<input id="hero-name" [(ngModel)]="hero.name" placeholder="name" class="input" />
+			</div>
+			<button type="button" class="button is-primary back" (click)="goBack()">Go Back</button>
+			<button type="button" class="button is-primary" (click)="save()">Save</button>
+		</div>
+	</div>
+</div>

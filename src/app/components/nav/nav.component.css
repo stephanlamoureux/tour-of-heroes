@@ -1,0 +1,12 @@
+nav {
+	font-weight: 500;
+}
+
+.brand {
+	font-weight: 500;
+	letter-spacing: -1px;
+}
+
+.brand span {
+	color: #00c4a7;
+}

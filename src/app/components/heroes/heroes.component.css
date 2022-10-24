@@ -1,0 +1,53 @@
+.main-title {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.heroes-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.heroes li:hover {
+	background-color: lightgray;
+}
+
+.heroes-wrapper .heroes {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	margin-left: 0;
+	justify-content: center;
+}
+
+.tile.is-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 2rem 2rem 0 !important;
+	min-width: 400px;
+	flex-wrap: nowrap;
+	align-content: center;
+	max-width: 400px;
+}
+
+.tile.is-child a {
+	margin-right: 10px;
+}
+
+.heroes-card {
+	margin: 1rem !important;
+}
+
+.add-hero-wrapper {
+	margin: 2rem auto;
+	width: 30%;
+}
+
+.add-button {
+	width: 100%;
+}
+
+.new-hero {
+	margin: 5px 0 10px 0;
+}

@@ -1,0 +1,26 @@
+/* HeroDetailComponent's private CSS styles */
+
+h2 {
+	text-align: center;
+	margin-top: 32px;
+	margin-bottom: 52px;
+}
+
+input {
+	margin: 5px 0 10px 0;
+}
+
+button:disabled {
+	background-color: #eee;
+	color: #ccc;
+	cursor: auto;
+}
+
+.details {
+	width: 30%;
+	margin: 0 auto;
+}
+
+.back {
+	margin-right: 20px;
+}
