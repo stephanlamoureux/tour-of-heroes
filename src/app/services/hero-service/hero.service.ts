@@ -11,7 +11,7 @@ import { catchError, retry, tap, map } from 'rxjs/operators'
 export class HeroService {
 	constructor(private messageService: MessageService, private http: HttpClient) {}
 
-	private heroesUrl = 'api/heroes' // URL to web api
+	private heroesUrl = 'api/heroes.php' // URL to web api
 
 	/** GET heroes from the server
 	 *
@@ -26,10 +26,7 @@ export class HeroService {
 	}
 
 	getHeroes(): Observable<Hero[]> {
-		return this.http.get<Hero[]>(this.heroesUrl).pipe(
-			tap(_ => this.log('fetched heroes')),
-			catchError(this.handleError<Hero[]>('getHeroes', []))
-		)
+		return this.http.get<Hero[]>('api/heroes.php')
 	}
 
 	/** GET hero by id. Will 404 if id not found
@@ -37,8 +34,9 @@ export class HeroService {
 	 * getHero() returns an Observable<Hero>, which is an observable of Hero objects rather than an observable of Hero arrays.
 	 */
 	getHero(id: number): Observable<Hero> {
-		const url = `${this.heroesUrl}/${id}`
-		return this.http.get<Hero>(url).pipe(
+		const url = `api/hero.php?id=${id}`
+		return this.http.get<Hero[]>(url).pipe(
+			map(hero => hero[0]),
 			tap(_ => this.log(`fetched hero id=${id}`)),
 			catchError(this.handleError<Hero>(`getHero id=${id}`))
 		)

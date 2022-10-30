@@ -1,13 +1,18 @@
 /* HeroDetailComponent's private CSS styles */
 
+.container {
+	padding-top: 8rem;
+}
+
 h2 {
 	text-align: center;
 	margin-top: 32px;
 	margin-bottom: 52px;
+	letter-spacing: -1px;
 }
 
 input {
-	margin: 5px 0 10px 0;
+	margin: 10px 0 15px 0;
 }
 
 button:disabled {
@@ -19,6 +24,17 @@ button:disabled {
 .details {
 	width: 30%;
 	margin: 0 auto;
+}
+
+.id {
+	margin-bottom: 5px;
+}
+
+.detail-id {
+	background-color: #00c4a7;
+	color: white;
+	padding: 0 5px;
+	border-radius: 3px;
 }
 
 .back {

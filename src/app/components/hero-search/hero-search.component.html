@@ -4,7 +4,12 @@
 		The searchTerms becomes an Observable emitting a steady stream of search terms.
 	-->
 	<label for="search-box">Hero Search:</label>
-	<input #searchBox id="search-box" class="input search" (input)="search(searchBox.value)" />
+	<input
+		#searchBox
+		id="search-box"
+		class="input is-primary search"
+		(input)="search(searchBox.value)"
+	/>
 
 	<!--
 		Since *ngFor can't do anything with an Observable, use the pipe | character followed by async.

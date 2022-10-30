@@ -1,6 +1,15 @@
+.hero.is-primary {
+	padding-top: 8rem;
+}
+
+.hero-body {
+	padding: 0 3rem 1rem 3rem;
+}
+
 .main-title {
-	margin-top: 2rem;
 	text-align: center;
+	font-weight: bold;
+	letter-spacing: -1px;
 }
 
 .heroes-wrapper {
@@ -9,7 +18,7 @@
 }
 
 .heroes li:hover {
-	background-color: lightgray;
+	background-color: rgb(255, 252, 252);
 }
 
 .heroes-wrapper .heroes {
@@ -18,21 +27,22 @@
 	flex-wrap: wrap;
 	margin-left: 0;
 	justify-content: center;
+	margin-bottom: 2rem;
 }
 
 .tile.is-child {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	margin: 0 2rem 2rem 0 !important;
-	min-width: 400px;
+	justify-content: flex-start;
+	margin: 0 2rem 2rem 2rem !important;
+	min-width: 225px;
+	max-width: 250px;
 	flex-wrap: nowrap;
 	align-content: center;
-	max-width: 400px;
 }
 
 .tile.is-child a {
-	margin-right: 10px;
+	margin-right: 15px;
 }
 
 .heroes-card {
@@ -40,7 +50,7 @@
 }
 
 .add-hero-wrapper {
-	margin: 2rem auto;
+	margin: 6rem auto;
 	width: 30%;
 }
 
@@ -49,5 +59,25 @@
 }
 
 .new-hero {
-	margin: 5px 0 10px 0;
+	margin: 10px 0 15px 0;
+}
+
+.hero-delete {
+	margin-left: auto;
+}
+
+.badge {
+	background-color: #00c4a7;
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: white;
+	margin-left: -10px;
+	margin-right: 5px;
+}
+
+.hero-name-link {
+	margin-left: 5px;
+	font-size: 1.2rem;
+	color: black;
+	padding-right: 10px;
 }

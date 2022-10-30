@@ -17,7 +17,9 @@ export class HeroesComponent implements OnInit {
 	}
 
 	getHeroes(): void {
-		this.heroService.getHeroes().subscribe(heroes => (this.heroes = heroes))
+		this.heroService
+			.getHeroes()
+			.subscribe({ next: heroes => (this.heroes = heroes), error: err => console.log(err) })
 	}
 
 	/**

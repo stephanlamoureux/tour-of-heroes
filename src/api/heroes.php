@@ -13,8 +13,7 @@ $db = new mysqli($host, $username, $passwd, $dbname);
   exit();
   }
 
-//SQL Query
- $sql_stmt = "SELECT id, name FROM heroes";
+$sql_stmt = "SELECT id, name FROM heroes";
 
 //Execute query
 $result = $db->query($sql_stmt);
