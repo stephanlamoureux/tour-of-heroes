@@ -8,10 +8,10 @@ $dbname = 'hereos';
 $db = new mysqli($host, $username, $passwd, $dbname);
 
 //If failure report and exit
- if ($db -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $db -> connect_error;
-  exit();
-  }
+if ($db->connect_errno) {
+    echo "Failed to connect to MySQL: " . $db->connect_error;
+    exit();
+}
 
 $sql_stmt = "SELECT id, name FROM heroes";
 
@@ -21,8 +21,8 @@ $result = $db->query($sql_stmt);
 //Loop over results
 $array = [];
 
-while($row = $result->fetch_assoc()) {
-  array_push($array, $row);
+while ($row = $result->fetch_assoc()) {
+    array_push($array, $row);
 }
 
 //Close connection to database
@@ -30,4 +30,3 @@ $db->close();
 
 //Display fetched data in JSON
 echo json_encode($array);
-?>
