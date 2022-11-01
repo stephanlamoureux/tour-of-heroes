@@ -13,20 +13,16 @@ if ($db->connect_errno) {
     exit();
 }
 
-$sql_stmt = "SELECT id, name FROM heroes";
+if (isset($_GET['id'])) {
 
-// Execute query
-$result = $db->query($sql_stmt);
+// sql to delete a record
+    $sql = "DELETE FROM heroes WHERE id= " . $_GET['id'];
 
-// Loop over results
-$array = [];
+    if ($conn->query($sql) === true) {
+        echo "Record deleted successfully";
+    } else {
+        echo "Error deleting record: " . $conn->error;
+    }
 
-while ($row = $result->fetch_assoc()) {
-    array_push($array, $row);
+    $conn->close();
 }
-
-// Close connection to database
-$db->close();
-
-// Display fetched data in JSON
-echo json_encode($array);

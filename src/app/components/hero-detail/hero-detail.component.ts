@@ -37,5 +37,11 @@ export class HeroDetailComponent implements OnInit {
 		}
 	}
 
+	delete(hero: Hero): void {
+		if (this.hero) {
+			this.heroService.deleteHero(hero.id).subscribe()
+		}
+	}
+
 	@Input() hero?: Hero
 }
