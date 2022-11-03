@@ -18,11 +18,11 @@ if (isset($_GET['id'])) {
 // sql to delete a record
     $sql = "DELETE FROM heroes WHERE id= " . $_GET['id'];
 
-    if ($conn->query($sql) === true) {
+    if ($db->query($sql) === true) {
         echo "Record deleted successfully";
     } else {
-        echo "Error deleting record: " . $conn->error;
+        echo "Error deleting record: " . $db->error;
     }
 
-    $conn->close();
+    $db->close();
 }
